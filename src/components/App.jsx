@@ -23,7 +23,7 @@ export class App extends React.Component {
       this.fetchImagesBySearchingTerm();
     }
 
-    if (this.state.page !== 1) {
+    if (prevState.page !== this.state.page) {
       window.scrollTo({
         top: document.documentElement.scrollHeight,
         behavior: 'smooth',
